@@ -1,0 +1,12 @@
+ <mat-list >
+    <div mat-subheader class="text-dark">Dosyalarım</div>
+    <mat-list-item class="text-dark" *ngFor="let file of files" [matTooltip]="file.fileFullDirectoryPath">
+      <mat-icon mat-list-icon>folder</mat-icon>
+      <div  mat-line>{{file.fileName}}</div>
+      <button mat-button (click)="copyUrl(file.fileFullDirectoryPath)">
+        Copy
+      </button>
+    </mat-list-item> 
+  </mat-list>
+   
+  

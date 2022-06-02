@@ -1,0 +1,40 @@
+
+<div class="d-flex justify-content-center mt-2">
+ 
+    <form [formGroup]="userOperationClaimForm">
+        <h1 class="text-center text-light">Kullanıcılara Rol Ata</h1>
+        
+        <div class="mb-3 mt-3">
+            <mat-form-field appearance="fill">
+                <mat-label>Kullanıcı seç</mat-label>
+                <mat-select  name="food" formControlName="userId">
+                  <mat-option [value]="user.id" *ngFor="let user of users" matTooltip="{{user.firstName +' '+ user.lastName}}">
+                      {{user.email}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="mb-3 mt-3">
+            <mat-form-field appearance="fill">
+                <mat-label>Rol Seç</mat-label>
+                <mat-select  name="food" formControlName="operationClaimId">
+                  <mat-option [value]="operationClaim.id" *ngFor="let operationClaim of operationClaims">
+                      {{operationClaim.name}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+       
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck"  formControlName="isApproved">
+            <label class="form-check-label text-center" for="invalidCheck">
+              Durumu
+            </label>
+          </div>
+          
+        <div class="gap-2 d-grid">
+            <button type="submit" class="btn btn-primary" (click)="add()">Ekle</button>
+        </div>
+      </form>
+</div>

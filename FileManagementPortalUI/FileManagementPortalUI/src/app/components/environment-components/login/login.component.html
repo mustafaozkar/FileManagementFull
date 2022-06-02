@@ -1,0 +1,30 @@
+<mat-toolbar>
+  <span>File Management</span>
+  <span class="example-spacer"></span>
+  <button mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" routerLink="/login">
+      Giriş yap
+  </button>
+  <button mat-button class="example-icon" aria-label="Example icon-button with share icon" routerLink="/register">
+      Kayıt Ol
+  </button>
+</mat-toolbar>
+
+<div class="container mt-5">
+    <h1 class="text-center fs-1">Giriş yap</h1>
+    <div class="d-flex justify-content-center">
+      <form class="login-form" [formGroup]="loginForm">
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label class="text-dark">Email</mat-label>
+          <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email" autocomplete="email">     
+        </mat-form-field>
+    
+        <mat-form-field class="w-100" appearance="outline">
+            <mat-label class="text-dark">Şifre</mat-label>
+            <input type="password" matInput formControlName="password" autocomplete="current-password">     
+          </mat-form-field>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button mat-raised-button color="primary" class="w-100" (click)="login()">Giriş yap</button>
+              </div>
+      </form>
+    </div>
+  </div>

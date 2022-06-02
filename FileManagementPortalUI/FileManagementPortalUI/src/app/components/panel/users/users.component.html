@@ -1,0 +1,28 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>İsim</th>
+        <th>Soyisim</th>
+        <th>Takma İsim</th>
+        <th>E-Posta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+    
+        <td>
+            {{user.firstName}}
+        </td>
+        <td>
+            {{user.lastName}}
+        </td>
+        <td>
+            {{user.nickName}}
+        </td>
+        <td>
+            {{user.email}}
+        </td>  
+       
+    </tr>
+    </tbody>
+  </table>

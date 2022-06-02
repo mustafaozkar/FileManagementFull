@@ -1,0 +1,49 @@
+<mat-toolbar>
+  <span>File Management</span>
+  <span class="example-spacer"></span>
+  <button mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" routerLink="/login">
+      Giriş yap
+  </button>
+  <button mat-button class="example-icon" aria-label="Example icon-button with share icon" routerLink="/register">
+      Kayıt Ol
+  </button>
+</mat-toolbar>
+
+<div class="container mt-5">
+    <h1 class="text-center">Kayıt Ol</h1>
+  
+    <div class="d-flex just justify-content-center">
+      <form class="register-form" [formGroup]="registerForm">
+  
+        <mat-form-field class="w-100" appearance="outline">
+            <mat-label class="text-dark">İsim</mat-label>
+            <input type="text" matInput placeholder="EX. Ahmet" formControlName="firstName" autocomplete="off">     
+          </mat-form-field>
+    
+          <mat-form-field class="w-100" appearance="outline">
+            <mat-label class="text-dark">Soyisim</mat-label>
+            <input type="text" matInput placeholder="EX. Yılmaz" formControlName="lastName" autocomplete="off">     
+          </mat-form-field>
+
+          <mat-form-field class="w-100" appearance="outline">
+            <mat-label class="text-dark">Takma isim</mat-label>
+            <input type="text" matInput placeholder="EX. ahmet_yılmaz" formControlName="nickName" autocomplete="off">     
+          </mat-form-field>
+    
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label class="text-dark">Email</mat-label>
+          <input type="email" matInput placeholder="Ex. ahmet@example.com" formControlName="email" autocomplete="email">     
+        </mat-form-field>
+    
+        <mat-form-field class="w-100" appearance="outline">
+            <mat-label class="text-dark">Şifre</mat-label>
+            <input type="password" matInput formControlName="password" autocomplete="new-password">     
+          </mat-form-field>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button mat-button color="primary" (click)="register()">Kayıt ol</button>
+              </div>
+  
+
+      </form>
+    </div>
+  </div>
